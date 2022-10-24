@@ -628,7 +628,7 @@ let module_item = let open API.AlgebraicData in declare {
     K("module-type","",A(modtypath,N),
       B (fun s -> ModuleType s),
       M (fun ~ok ~ko -> function ModuleType s -> ok s | _ -> ko ()));
-    K("gref","",A(gref,N),
+    K("module-gref","",A(gref,N),
       B (fun s -> Gref s),
       M (fun ~ok ~ko -> function Gref x -> ok x | _ -> ko ()));
     K("module-functor","",A(modpath,A(B.list modtypath,N)),
